@@ -1,26 +1,14 @@
 import styled from "styled-components";
+import Circle from "./Circle";
 
-const Title = styled.h1`
-    color: ${(props) => props.theme.textColor};
-`;
-
-const Wrapper = styled.div`
-  display: flex;
-  height: 100vh;
-  width: 100vw;
-  justify-content: center;
-  align-items: center;
-  background-color: ${(props) => props.theme.backgroundColor};
-`;
-
-//as 라는 props
-//링크로서 사용하고 싶다고 명시 할 수 있게 된다.
+//3.2 Typing the Props
 function App(){
-  return (
-        <Wrapper>
-            <Title>Hello</Title>
-        </Wrapper>
-  );
+
+  return (<div>
+            <Circle bgColor="tomato" />
+            <Circle bgColor="teal" />
+          </div>
+    );
 }
 
 export default App;
