@@ -12,7 +12,10 @@ function User(){
             <hr />
             {/* /followers 슬래시를 넣으면 localhost:3001/followers로 이동함. */}
             <Link to="followers" >see Followers</Link>
-            <Outlet />
+            {/* context로 text,true,false,number,object,array 뭐든 보낼 수 있다. */}
+            <Outlet context={{
+                nameOfMyUser : users[Number(userId) - 1].name,
+            }} />
             {/* Route 스크린에 자식이 있다면 
             outlet 이 자식을 렌더 해준다.*/}       
             </div>
